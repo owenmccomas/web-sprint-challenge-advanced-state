@@ -35,7 +35,7 @@ export default function App() {
           <NavLink id="formLink" to="/quiz-new">Form</NavLink>
         </nav>
         <Routes>
-          <Route path="/" element={<Wheel wheel={reducer.wheel}/>} />
+          <Route path="/" element={<Wheel />} />
           <Route path="quiz" element={<Quiz />} />
           <Route path="quiz-new" element={<Form />} />
         </Routes>

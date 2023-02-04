@@ -14,7 +14,7 @@ export function Wheel(props) {
     <div className={props.wheel === i ? `${active.isActive}` : `${active.isntActive}`} 
          style={{ "--i": i }} 
          key={i}>
-          {props.wheel === i ? `${active.isActiveB}` : `${active.isActiveB}`}
+          {props.wheel === i ? `${active.isActiveB}` : `${active.isntActiveB}`}
     </div>
   ));
 

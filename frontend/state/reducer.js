@@ -19,16 +19,31 @@ function wheel(state = initialWheelState, action) {
 
 const initialQuizState = null
 function quiz(state = initialQuizState, action) {
+  switch(action.type){
+    case types.SET_QUIZ_INTO_STATE: {
+      return action.payload
+    }
+  }
   return state
 }
 
 const initialSelectedAnswerState = null
 function selectedAnswer(state = initialSelectedAnswerState, action) {
+  switch(action.type){
+    case types.SET_SELECTED_ANSWER: {
+      return state = action.payload
+    }
+  }
   return state
 }
 
 const initialMessageState = ''
 function infoMessage(state = initialMessageState, action) {
+  switch(action.type){
+    case types.SET_INFO_MESSAGE: {
+      return state = action.payload
+    }
+  }
   return state
 }
 
@@ -38,6 +53,15 @@ const initialFormState = {
   newFalseAnswer: '',
 }
 function form(state = initialFormState, action) {
+  switch(action.type){
+    case types.INPUT_CHANGE: {
+      const { name, value } = action.payload
+      return { ...state, [name]: value}
+    }
+    case types.RESET_FORM: {
+      return initialFormState
+    }
+  }
   return state
 }
 
