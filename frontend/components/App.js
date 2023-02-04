@@ -7,6 +7,7 @@ import Wheel from './Wheel'
 import Quiz from './Quiz'
 import Message from './Message'
 import Form from './Form'
+import { connect } from 'react-redux'
 
 // REDUX IMPORTS
 import { createStore, applyMiddleware, compose } from 'redux'
@@ -34,7 +35,7 @@ export default function App() {
           <NavLink id="formLink" to="/quiz-new">Form</NavLink>
         </nav>
         <Routes>
-          <Route path="/" element={<Wheel />} />
+          <Route path="/" element={<Wheel wheel={reducer.wheel}/>} />
           <Route path="quiz" element={<Quiz />} />
           <Route path="quiz-new" element={<Form />} />
         </Routes>
