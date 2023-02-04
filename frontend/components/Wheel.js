@@ -17,9 +17,7 @@ export function Wheel(props) {
           {props.wheel === i ? `${active.isActiveB}` : `${active.isntActiveB}`}
     </div>
   ));
-
-
-
+  
   return (
     <div id="wrapper">
       <div id="wheel">
